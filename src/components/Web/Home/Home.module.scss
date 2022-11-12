@@ -1,0 +1,81 @@
+@import '../../../variables.scss';
+.homeContainer{
+  margin-top: 70px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  .title{
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    
+    h1{
+      line-height: 70px;
+      font-weight: 800;
+      text-transform: capitalize;
+      margin: 0;
+      text-align: center;
+      font-size: 70px;
+      
+      span{
+        color: $color-web-one;
+      }
+    }
+    p{
+      text-align: center;
+      padding: 0;
+      font-size: 20px;
+      font-weight: 300;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .title{
+      h1{
+        font-size: 40px;
+        line-height: 40px;
+      }
+      p{
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    .title{
+      h1{
+        font-size: 30px;
+        line-height: 30px;
+      }
+      p{
+        font-size: 13px;
+      }
+    }
+  }
+
+}
+
+
+.btnArea{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .btnOne{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  .btnTwo{
+    padding: 10px;
+    font-size: 20px;
+    background: rgba(164, 164, 164, 0.438);
+
+  }
+}

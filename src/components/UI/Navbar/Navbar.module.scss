@@ -1,0 +1,48 @@
+@import '../../../variables.scss';
+
+.headerContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #ffffff2a;
+  max-width: 1400px;
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  .leftHeader{
+    h2{
+      margin: 0;
+      font-size: 30px;
+      span{
+        color: $color-web-one;
+      }
+    }
+  }
+
+  .rightHeader{
+    ul{
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      li:nth-child(1){
+        margin-right: 30px;
+        .btn{
+          padding: 5px;
+          font-size: 15px;
+        }
+      }
+      li:nth-child(2){
+        cursor: pointer;
+        padding-top: 10px;
+        font-size: 30px;
+      }
+    }
+  }
+}

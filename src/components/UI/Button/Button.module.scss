@@ -1,0 +1,7 @@
+@import '../../../variables.scss';
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: $color-web-one;
+  font-weight: 300;
+}
