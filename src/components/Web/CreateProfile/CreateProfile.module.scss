@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+.createContainer{
+  margin-top: 70px;
+  min-height: 94vh;
+  display: flex;
+  .fields{
+    width: 50%;
+  }
+  
+  .readme{
+    border-left: 1px solid $line-color;
+    width: 50%;
+  }
+}

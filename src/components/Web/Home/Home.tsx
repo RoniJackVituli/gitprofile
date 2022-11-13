@@ -30,8 +30,8 @@ const Home = () => {
         <Animated animationIn="fadeIn" animationOut="fadeIn" isVisible={true} animationInDuration={3800}
 >
           <div className={classes.btnArea}>
-            <Button className={classes.btnOne}>Create Profile</Button>
-            <Button className={classes.btnTwo}>Source codes</Button>
+            <Button link={'/createProfile'} className={classes.btnOne}>Create Profile</Button>
+            <Button className={classes.btnTwo} href={"https://github.com/RoniJackVituli/gitprofile"}>Source codes</Button>
           </div>
         </Animated>
       </div>
