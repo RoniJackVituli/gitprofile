@@ -1,0 +1,27 @@
+.previewContainer{
+  margin: 5px;
+  height: 87vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  h1{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+  h4{
+    margin: 0;
+    font-size: 25px;
+  }
+  p{
+    color: rgba(255, 255, 255, 0.712);
+  }
+  ul{
+    li{
+      color: rgba(255, 255, 255, 0.712);
+      a{
+        color: rgb(85, 85, 170);
+      }
+    }
+  }
+}
