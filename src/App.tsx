@@ -9,7 +9,12 @@ import {
   Routes,
 } from "react-router-dom";
 import CreateProfile from "./components/Web/CreateProfile/CreateProfile";
+
+
+
 function App() {
+
+
   return (
     <Router>
       <div className="App">

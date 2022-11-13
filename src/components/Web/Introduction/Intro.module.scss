@@ -1,7 +1,9 @@
 @import "../../../variables.scss";
 .introContainer {
+  display: flex;
+  flex-direction: column;
   .titleSection {
-    height: 20vh;
+    overflow: hidden;
     padding: 20px;
     border-bottom: 1px solid $line-color;
     h1 {
@@ -13,11 +15,23 @@
       font-weight: 300;
       margin: 0;
     }
+    .divBtn{
+      margin-top: 10px;
+
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      .btn{
+        text-align: center;
+      
+        padding: 5px;
+      }
+    }
   }
 
   .fillFields {
-    max-height: 72vh;
-    overflow: auto;
+    height: 80vh;
+    overflow-y: auto;
     overflow-x: hidden;
     padding: 20px;
     .field{
@@ -37,6 +51,18 @@
     h1{
       text-transform: capitalize;
       margin: 0;
+    }
+    .divBtn{
+      margin-top: 10px;
+
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      .btn{
+        text-align: center;
+      
+        padding: 5px;
+      }
     }
   }
 

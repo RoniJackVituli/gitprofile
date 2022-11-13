@@ -24,7 +24,7 @@ const Home = () => {
           </h1>
           <p>
             In a few minutes you can present your skills,
-            <br /> and the projects so go ahead what are you waiting for?{" "}
+            <br /> and the projects, so go ahead what are you waiting for?{" "}
           </p>
         </Animated>
         <Animated animationIn="fadeIn" animationOut="fadeIn" isVisible={true} animationInDuration={3800}

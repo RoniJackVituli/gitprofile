@@ -2,7 +2,25 @@ import React from "react";
 import classes from "./Intro.module.scss";
 import { TextareaAutosize, TextField } from "@mui/material";
 import { IntroFields, AboutMeFields } from "./IntroFields";
-const Intro = () => {
+import Button from "../../UI/Button/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { IntroductionActions } from "../../../slices/introduction-slice";
+import { RootState } from "../../../store/store";
+
+type Props = {
+  moveForward?: () => void;
+  backForward?: () => void;
+};
+
+const Intro: React.FC<Props> = ({ moveForward }) => {
+  const dispatch = useDispatch();
+  const introduction = useSelector((state: RootState) => state.intro);
+  const changeHandler = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
+    const {name , value} = event.target;
+    dispatch(IntroductionActions.update({name, value}))
+  }
+
+
   return (
     <div className={classes.introContainer}>
       <div className={classes.titleSection}>
@@ -11,6 +29,11 @@ const Intro = () => {
           This is the stage to introduce yourself, tell them who you are and
           what you like to do &#129299;
         </p>
+        <div className={classes.divBtn}>
+          <Button className={classes.btn} onClick={moveForward}>
+            Next section
+          </Button>
+        </div>
       </div>
       <div className={classes.fillFields}>
         {IntroFields.map((field, i) => {
@@ -23,6 +46,8 @@ const Intro = () => {
                 </p>
                 <TextareaAutosize
                   maxRows={4}
+                  value={introduction.description}
+                  onChange={changeHandler}
                   aria-label="maximum height"
                   name={field.name}
                   placeholder={field.placeholder}
@@ -46,9 +71,11 @@ const Intro = () => {
                 {field.label.toLocaleUpperCase()}
               </p>
               <TextField
+                value={(introduction as any)[field.name]}
                 name={field.name}
                 size="small"
                 focused={false}
+                onChange={changeHandler}
                 sx={{
                   input: { color: "white", height: "20px", fontSize: "13px" },
                   width: "100%",
@@ -64,7 +91,7 @@ const Intro = () => {
         })}
         <h1>more about me</h1>
         {AboutMeFields.map((field, i) => {
-          if (field.name === "portfolio" || field.name === "project") {
+          if (field.name === "portfolio_name" || field.name === "project_name") {
             return (
               <div className={classes.field} key={i}>
                 <p>
@@ -72,7 +99,9 @@ const Intro = () => {
                   {field.label.toLocaleUpperCase()}
                 </p>
                 <TextField
+                  value={field.name === 'portfolio_name' ? introduction.portfolio_name : introduction.project_name}
                   name={field.name}
+                  onChange={changeHandler}
                   size="small"
                   focused={false}
                   sx={{
@@ -91,7 +120,9 @@ const Intro = () => {
                   variant="outlined"
                 />
                 <TextField
-                  name={field.name2}
+                  name={field.site?.name}
+                  value={field.name === 'portfolio_name' ? introduction.portfolio_url : introduction.project_url}
+                  onChange={changeHandler}
                   size="small"
                   focused={false}
                   sx={{
@@ -108,7 +139,7 @@ const Intro = () => {
                   InputProps={{
                     startAdornment: <div>https://</div>,
                   }}
-                  placeholder={field.placeholder2}
+                  placeholder={field.site?.value}
                   variant="outlined"
                 />
               </div>
@@ -122,9 +153,11 @@ const Intro = () => {
                 {field.label.toLocaleUpperCase()}
               </p>
               <TextField
+                value={(introduction as any)[field.name]}
                 name={field.name}
                 size="small"
                 focused={false}
+                onChange={changeHandler}
                 sx={{
                   input: { color: "white", height: "20px", fontSize: "13px" },
                   width: "100%",
@@ -138,6 +171,11 @@ const Intro = () => {
             </div>
           );
         })}
+        <div className={classes.divBtn}>
+          <Button className={classes.btn} onClick={moveForward}>
+            Next section
+          </Button>
+        </div>
       </div>
     </div>
   );

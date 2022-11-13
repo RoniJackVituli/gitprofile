@@ -1,14 +1,26 @@
 @import '../../../variables.scss';
 .createContainer{
-  margin-top: 70px;
-  min-height: 94vh;
+  position: relative;
   display: flex;
+  @media (max-width: 770px) {
+   flex-direction: column; 
+  }
   .fields{
+    height: 100%;
+    margin-top: 70px;
     width: 50%;
+    @media (max-width: 770px) {
+      width: 100%;
+    }
   }
   
   .readme{
-    border-left: 1px solid $line-color;
+    margin-top: 70px;
     width: 50%;
+    border-left: 1px solid $line-color;
+    @media (max-width: 770px) {
+      border-top: 1px solid $line-color;
+      width: 100%;
+    }
   }
 }

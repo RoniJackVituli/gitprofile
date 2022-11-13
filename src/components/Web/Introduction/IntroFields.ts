@@ -2,7 +2,7 @@
 export const IntroFields = [
   {
     icon:'👋🏻',
-    name:'fullname',
+    name:'fullName',
     label:'hey! my name is:', 
     placeholder: 'Roni Jack',
   },
@@ -18,6 +18,7 @@ export const IntroFields = [
     label:'description', 
     placeholder: 'My name’s Roni, I’m 38 work as a software engineer for a smaller company, in an agile team, working mostly on online maps, with Java and C++.',
   },
+  
 
 ];
 
@@ -25,30 +26,28 @@ export const AboutMeFields = [
   {
     icon:'🌍',
     name:'location',
-    label:'I\'M BASED IN:', 
+    label:'I\'m actually from:', 
     placeholder: 'California',
   },
   {
     icon:'✉️',
-    name:'location',
+    name:'email',
     label:'CONTACT ME AT:', 
     placeholder: 'RoniJack@gmail.com',
   },
   {
     icon:'🖥️',
-    name:'portfolio',
-    name2:'portfolio_two',
+    name:'portfolio_name',
     label:'SEE MY PORTFOLIO:', 
     placeholder: 'My Portfolio',
-    placeholder2: 'MyPortfolio.com',
+    site: {name: 'portfolio_url', value: 'MyPortfolio.com'},
   },
   {
     icon:'🚀',
-    name:'project',
-    name2:'project_two',
-    label:'I\'M CURRENTLY WORKING ON:', 
+    name:'project_name',
+    label:'I\'M CURRENTLY WORKING ON:',
     placeholder: 'My Project',
-    placeholder2: 'MyProject.com',
+    site: {name: 'project_url', value: 'MyPortfolio.com'},
   },
   {
     icon:'🧠',
@@ -64,7 +63,7 @@ export const AboutMeFields = [
   },
   {
     icon:'⚡',
-    name:'learning',
+    name:'else',
     label:'ANYTHING ELSE:', 
     placeholder: 'I really like ski holidays',
   },

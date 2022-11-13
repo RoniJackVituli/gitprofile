@@ -1,0 +1,31 @@
+@import '../../../variables.scss';
+
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  .titleSection {
+    overflow: hidden;
+    padding: 20px;
+    border-bottom: 1px solid $line-color;
+    h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 300;
+      margin: 0;
+    }
+    .divBtn{
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .btn{
+        text-align: center;
+      
+        padding: 5px;
+      }
+    }
+  }
+}
