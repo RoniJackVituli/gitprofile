@@ -3,6 +3,7 @@ import Button from "../../UI/Button/Button";
 import Markdown from "./Markdown";
 import Preview from "./Preview";
 import classes from "./ReadMe.module.scss";
+import {AiOutlineArrowDown ,AiOutlineEye} from 'react-icons/ai';
 
 const ReadMe = () => {
   const [choice, setChoice] = useState({ name: "preview", choice: true });
@@ -20,14 +21,16 @@ const ReadMe = () => {
           onClick={() => {
             chooseOptionHandler("preview");
           }}
+          iconLeft={<AiOutlineEye/>}
         >
-          Preview
+          <span>Preview</span>
         </Button>
         <Button
           className={`${choice.choice ? classes.grey : classes.original}`}
           onClick={() => {
             chooseOptionHandler("markdown");
           }}
+          iconLeft={<AiOutlineArrowDown/>}
         >
           Markdown
         </Button>

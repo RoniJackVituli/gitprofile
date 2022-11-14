@@ -1,9 +1,11 @@
 import React, { Fragment, useState } from "react";
+import Navbar from "../../UI/Navbar/Navbar";
 import Intro from "../Introduction/Intro";
 import ReadMe from "../ReadMe/ReadMe";
 import Skills from "../Skills/Skills";
+import Social from "../Social/Social";
 import classes from "./CreateProfile.module.scss";
-export const SECTIONS = [Intro, Skills];
+export const SECTIONS = [Intro, Skills, Social];
 
 const CreateProfile = () => {
   
@@ -21,6 +23,8 @@ const CreateProfile = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className={classes.createContainer}>
       <div className={classes.fields}>
         {SECTIONS.map((Section, i) => {
@@ -39,6 +43,7 @@ const CreateProfile = () => {
         <ReadMe/>
       </div>
     </div>
+        </>
   );
 };
 

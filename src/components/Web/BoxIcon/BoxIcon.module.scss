@@ -1,0 +1,37 @@
+.boxiconContainer {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(75, 49, 75, 0.636);
+  margin-bottom: 50px;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  .titlebox {
+    display: flex;
+    align-items: center;
+    h1 {
+      font-weight: 400;
+      font-size: 20px;
+      margin: 0;
+      vertical-align: middle;
+      text-transform: capitalize;
+    }
+    span {
+      display: flex;
+      font-size: 25px;
+      margin-right: 10px;
+    }
+  }
+  .list {
+    @media (max-width: 770px) {
+      text-align: center;
+    }
+    img {
+      cursor: pointer;
+      width: 40px;
+      margin-right: 10px;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import Button from "../../UI/Button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { IntroductionActions } from "../../../slices/introduction-slice";
 import { RootState } from "../../../store/store";
+import {MdArrowForwardIos} from 'react-icons/md';
 
 type Props = {
   moveForward?: () => void;
@@ -30,7 +31,7 @@ const Intro: React.FC<Props> = ({ moveForward }) => {
           what you like to do &#129299;
         </p>
         <div className={classes.divBtn}>
-          <Button className={classes.btn} onClick={moveForward}>
+          <Button className={classes.btn} iconRight={<MdArrowForwardIos/>} onClick={moveForward}>
             Next section
           </Button>
         </div>
