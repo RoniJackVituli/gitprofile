@@ -3,7 +3,6 @@ import Button from "../../UI/Button/Button";
 import classes from "./Skills.module.scss";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import BoxIcon from "../BoxIcon/BoxIcon";
-import core from './icons/core.svg';
 type Props = {
   moveForward?: () => void;
   backForward?: () => void;
@@ -37,7 +36,7 @@ const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
         </div>
       </div>
       <div className={classes.fillFields}>
-        <BoxIcon title="core" iconTitle={core} list={{}}/>
+        <BoxIcon title="core" iconTitle={''} list={{}}/>
       </div>
     </div>
   );

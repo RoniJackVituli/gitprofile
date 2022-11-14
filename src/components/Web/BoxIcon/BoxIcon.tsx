@@ -1,6 +1,5 @@
-import React, { Fragment } from "react";
+import React  from "react";
 import classes from "./BoxIcon.module.scss";
-import {Lang} from '../Skills/icons/Lang/langSvg';
 type Props = {
   title: string;
   list: any;
@@ -13,11 +12,7 @@ const BoxIcon: React.FC<Props> = ({ title, iconTitle, list }) => {
       <div className={classes.titlebox}>
         <h1>{title}</h1>
       </div>
-      <div className={classes.list} style={{}}>
-        {Object.keys(Lang).map((key) =>{
-          return <>{(Lang as any)[key]}</>
-        })}
-      </div>
+      
     </div>
   );
 };
