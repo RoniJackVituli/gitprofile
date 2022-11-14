@@ -2,9 +2,9 @@ import React from "react";
 import classes from "./Preview.module.scss";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
-
 const Preview = () => {
   const introduction = useSelector((state: RootState) => state.intro);
+  const skills = useSelector((state: RootState) => state.skills.skills);
 
   return (
     <div className={classes.previewContainer}>
@@ -23,8 +23,8 @@ const Preview = () => {
         )}
         {introduction.portfolio_name && introduction.portfolio_url && (
           <li>
-            <span>🖥️</span> See my portfolio at {" "}
-            <a href={'https://' + introduction.portfolio_url}>
+            <span>🖥️</span> See my portfolio at{" "}
+            <a href={"https://" + introduction.portfolio_url}>
               {introduction.portfolio_name}
             </a>
           </li>
@@ -32,13 +32,13 @@ const Preview = () => {
         {introduction.email && (
           <li>
             <span>✉️</span> You can contact me at{" "}
-              <a href={`mailto: ${introduction.email}`}>{introduction.email}</a>
+            <a href={`mailto: ${introduction.email}`}>{introduction.email}</a>
           </li>
         )}
         {introduction.project_name && introduction.project_url && (
           <li>
-           <span>🚀 </span> I'm currently working on {" "}
-            <a href={'https://' + introduction.project_url}>
+            <span>🚀 </span> I'm currently working on{" "}
+            <a href={"https://" + introduction.project_url}>
               {introduction.project_name}
             </a>
           </li>
@@ -50,7 +50,8 @@ const Preview = () => {
         )}
         {introduction.collaborating && (
           <li>
-            <span>🤝</span> I'm open to collaborating on {introduction.collaborating}
+            <span>🤝</span> I'm open to collaborating on{" "}
+            {introduction.collaborating}
           </li>
         )}
         {introduction.else && (
@@ -59,6 +60,22 @@ const Preview = () => {
           </li>
         )}
       </ul>
+      {skills.length > 0 && <h1>Skills</h1>}
+      <div className={classes.skill}>
+        {skills.length > 0 &&
+          skills.map((skill, i) => {
+            return (
+              <a href={skill.link} target="_blank" rel="noreferrer noopener">
+                {" "}
+                <img
+                  key={i}
+                  src={skill.path + skill.name + "-color.svg"}
+                  alt=""
+                />
+              </a>
+            );
+          })}
+      </div>
     </div>
   );
 };

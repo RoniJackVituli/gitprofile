@@ -3,12 +3,16 @@ import Button from "../../UI/Button/Button";
 import classes from "./Skills.module.scss";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import BoxIcon from "../BoxIcon/BoxIcon";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
 type Props = {
   moveForward?: () => void;
   backForward?: () => void;
 };
 
 const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
+  const core = useSelector((state:RootState) => state.skills.core);
+
   return (
     <div className={classes.skillContainer}>
       <div className={classes.titleSection}>
@@ -36,7 +40,7 @@ const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
         </div>
       </div>
       <div className={classes.fillFields}>
-        <BoxIcon title="core" iconTitle={''} list={{}}/>
+        <BoxIcon title="core" iconTitle={''} list={core}/>
       </div>
     </div>
   );

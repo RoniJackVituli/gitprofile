@@ -4,6 +4,7 @@ import Markdown from "./Markdown";
 import Preview from "./Preview";
 import classes from "./ReadMe.module.scss";
 import {AiOutlineArrowDown ,AiOutlineEye} from 'react-icons/ai';
+
 const ReadMe = () => {
   const [choice, setChoice] = useState({ name: "preview", choice: true });
   const chooseOptionHandler = (name: string) => {

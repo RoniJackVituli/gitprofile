@@ -24,4 +24,13 @@
       }
     }
   }
+
+  .skill{
+    display: flex;
+    width: 100%;
+    gap: 10px;    
+    img{
+      width: 45px;
+    }
+  }
 }

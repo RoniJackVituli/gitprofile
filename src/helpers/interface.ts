@@ -12,3 +12,22 @@ export interface IntroductionFields {
   collaborating: '',
   else: '',
 }
+
+
+export interface IconDataField {
+  name: string;
+  path: string;
+  toolTip: string;
+  link:string;
+  clicked: boolean,
+}
+
+
+export interface IconData {
+  core:IconDataField[],
+  frontend: IconDataField[],
+  backend: IconDataField[],
+  other:IconDataField[],
+  web3: IconDataField[],
+  skills: any[],
+}
