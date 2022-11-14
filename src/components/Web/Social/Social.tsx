@@ -1,23 +1,25 @@
-import React from 'react'
-import Button from '../../UI/Button/Button';
-import classes from './Social.module.scss';
-import {MdArrowBackIosNew, MdArrowForwardIos} from 'react-icons/md';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../store/store';
-import { TextField } from '@mui/material';
-import { SocialActions } from '../../../slices/Social-slice';
+import React from "react";
+import Button from "../../UI/Button/Button";
+import classes from "./Social.module.scss";
+import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
+import { TextField } from "@mui/material";
+import { SocialActions } from "../../../slices/Social-slice";
 type Props = {
   moveForward?: () => void;
   backForward?: () => void;
 };
 
-
-const Social:React.FC<Props> = ({moveForward, backForward}) => {
+const Social: React.FC<Props> = ({ moveForward, backForward }) => {
   const dispatch = useDispatch();
-  const changeHandler = (event: React.ChangeEvent<HTMLInputElement> , index:number) => {
-    const {name , value} = event.target;
-    dispatch(SocialActions.update({index, value}))
-  }
+  const changeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    index: number
+  ) => {
+    const value = event.target.value;
+    dispatch(SocialActions.update({ index, value }));
+  };
   const socials = useSelector((state: RootState) => state.social.socials);
   return (
     <div className={classes.socialContainer}>
@@ -47,19 +49,20 @@ const Social:React.FC<Props> = ({moveForward, backForward}) => {
       </div>
       <div className={classes.fillFields}>
         {socials.map((social, i) => {
-          
           return (
             <div className={classes.field} key={i}>
-              <p>
-                <img src={social.path + social.name} alt=""/>
-                {social.label.toLocaleUpperCase()}
-              </p>
+              <div className={classes.label}>
+                <img src={social.path + social.name + ".svg"} alt="" />
+                <p>{social.label.toLocaleUpperCase()}</p>
+              </div>
               <TextField
-                value={`${social.userName ? social.userName : ''}`}
+                value={`${social.userName ? social.userName : ""}`}
                 name={social.name}
                 size="small"
                 focused={false}
-                onChange={(e:React.ChangeEvent<HTMLInputElement>)=>{changeHandler(e , i)}}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  changeHandler(e, i);
+                }}
                 sx={{
                   input: { color: "white", height: "20px", fontSize: "13px" },
                   width: "100%",
@@ -68,9 +71,13 @@ const Social:React.FC<Props> = ({moveForward, backForward}) => {
                   background: "#ffffff07",
                 }}
                 InputProps={{
-                  startAdornment: <div style={{fontSize:'15px', opacity:'0.9'}}>{social.link}</div>,
+                  startAdornment: (
+                    <div style={{ fontSize: "15px", opacity: "0.9" }}>
+                      {social.link}
+                    </div>
+                  ),
                 }}
-                placeholder={'yourname'}
+                placeholder={"yourname"}
                 variant="outlined"
               />
             </div>
@@ -95,7 +102,7 @@ const Social:React.FC<Props> = ({moveForward, backForward}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Social
+export default Social;

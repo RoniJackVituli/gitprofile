@@ -9,8 +9,8 @@ const initialState: init = {
   socials: [
     {
       label: "github profile",
-      name: "git",
-      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/skill-section/src/helpers/icons/socials/",
+      name: "github",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/socials/",
       link: "https://www.github.com/",
       userName: "",
     },

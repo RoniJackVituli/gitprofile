@@ -34,6 +34,16 @@
     overflow-x: hidden;
     padding: 0px 20px;
     padding-top: 50px;
+    .field{
+      .label{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img{
+          width: 20px;
+        }
+      }
+    }
     .divBtn{
       margin-top: 30px;
       display: flex;
