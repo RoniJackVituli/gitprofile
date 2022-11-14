@@ -15,7 +15,7 @@ const Navbar = () => {
       </div>
       <div className={classes.rightHeader}>
         <ul>
-          <Button link="/createProfile" className={classes.btn}>
+          <Button link="/createProfile" className={classes.btn} style={{padding:'8px'}}>
             Create Profile
           </Button>
           <a href={"https://github.com/RoniJackVituli/gitprofile/"}>

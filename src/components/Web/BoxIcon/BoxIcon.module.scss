@@ -1,0 +1,29 @@
+.boxiconContainer{
+  height: 150px;
+  border-radius: 10px;
+  background-color: rgba(75, 49, 75, 0.636);
+  margin-bottom: 50px;
+  .titlebox{
+    h1{
+      padding-left: 10px;
+      padding-top: 10px;
+      font-weight: 500;
+      font-size: 20px;
+      margin: 0;
+      text-transform: uppercase;
+      svg{
+        fill: red;
+        margin-right: 5px;
+        width: 25px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .list{
+    svg{
+      cursor: pointer;
+      width: 50px;
+    }
+  }
+}

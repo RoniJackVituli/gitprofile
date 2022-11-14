@@ -27,11 +27,27 @@ const Home = () => {
             <br /> and the projects, so go ahead what are you waiting for?{" "}
           </p>
         </Animated>
-        <Animated animationIn="fadeIn" animationOut="fadeIn" isVisible={true} animationInDuration={3800}
->
+        <Animated
+          animationIn="fadeIn"
+          animationOut="fadeIn"
+          isVisible={true}
+          animationInDuration={3800}
+        >
           <div className={classes.btnArea}>
-            <Button link={'/createProfile'} className={classes.btnOne}>Create Profile</Button>
-            <Button className={classes.btnTwo} href={"https://github.com/RoniJackVituli/gitprofile"}>Source codes</Button>
+            <Button
+              link={"/createProfile"}
+              className={classes.btnOne}
+              style={{ fontWeight: "300" }}
+            >
+              Create Profile
+            </Button>
+            <Button
+              className={classes.btnTwo}
+              href={"https://github.com/RoniJackVituli/gitprofile"}
+              style={{ fontWeight: "300" }}
+            >
+              Source codes
+            </Button>
           </div>
         </Animated>
       </div>
