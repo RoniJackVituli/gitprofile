@@ -65,10 +65,8 @@ const Preview = () => {
         {skills.length > 0 &&
           skills.map((skill, i) => {
             return (
-              <a href={skill.link} target="_blank" rel="noreferrer noopener">
-                {" "}
+              <a href={skill.link} target="_blank" rel="noreferrer noopener" key={i}>
                 <img
-                  key={i}
                   src={skill.path + skill.name + "-color.svg"}
                   alt=""
                 />

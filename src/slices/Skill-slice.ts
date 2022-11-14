@@ -125,7 +125,29 @@ const initialState: IconData = {
       clicked: false,
     },
   ],
-  backend: [],
+  backend: [
+    {
+      name: "nodejs",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/skill-section/src/helpers/icons/programming/",
+      toolTip: "Nodejs",
+      link: "https://nodejs.org/en/docs/",
+      clicked: false,
+    },
+    {
+      name: "express",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/skill-section/src/helpers/icons/programming/",
+      toolTip: "Express",
+      link: "https://expressjs.com/",
+      clicked: false,
+    },
+    {
+      name: "mongodb",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/skill-section/src/helpers/icons/programming/",
+      toolTip: "MongoDB",
+      link: "https://mongodb.com/",
+      clicked: false,
+    },
+  ],
   software: [
     {
       name: "photoshop",

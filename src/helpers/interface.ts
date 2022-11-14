@@ -31,3 +31,12 @@ export interface IconData {
   software: IconDataField[],
   skills: any[],
 }
+
+
+export interface SocialData {
+  label:string;
+  name:string;
+  path:string;
+  link:string;
+  userName: string;
+}

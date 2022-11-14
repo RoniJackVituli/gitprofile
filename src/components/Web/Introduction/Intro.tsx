@@ -173,7 +173,7 @@ const Intro: React.FC<Props> = ({ moveForward }) => {
           );
         })}
         <div className={classes.divBtn}>
-          <Button className={classes.btn} iconRight={<MdArrowForwardIos/>}onClick={moveForward}>
+          <Button className={classes.btn} onClick={moveForward}>
             Next section
           </Button>
         </div>

@@ -3,8 +3,9 @@ import Navbar from "../../UI/Navbar/Navbar";
 import Intro from "../Introduction/Intro";
 import ReadMe from "../ReadMe/ReadMe";
 import Skills from "../Skills/Skills";
+import Social from "../Social/Social";
 import classes from "./CreateProfile.module.scss";
-export const SECTIONS = [Intro, Skills];
+export const SECTIONS = [Intro, Skills, Social];
 
 const CreateProfile = () => {
   
