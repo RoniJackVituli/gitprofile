@@ -5,13 +5,14 @@ import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import BoxIcon from "../BoxIcon/BoxIcon";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
+import { MdComputer } from "react-icons/md";
 type Props = {
   moveForward?: () => void;
   backForward?: () => void;
 };
 
 const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
-  const core = useSelector((state:RootState) => state.skills.core);
+  const core = useSelector((state: RootState) => state.skills.core);
 
   return (
     <div className={classes.skillContainer}>
@@ -40,7 +41,27 @@ const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
         </div>
       </div>
       <div className={classes.fillFields}>
-        <BoxIcon title="core" iconTitle={''} list={core}/>
+        <BoxIcon title="core" iconTitle={<MdComputer />} list={core} />
+        <BoxIcon title="frontend" iconTitle={<MdComputer />} list={core} />
+        <BoxIcon title="backend" iconTitle={<MdComputer />} list={core} />
+        <BoxIcon title="software" iconTitle={<MdComputer />} list={core} />
+        <BoxIcon title="other" iconTitle={<MdComputer />} list={core} />
+        <div className={classes.divBtn}>
+          <Button
+            className={classes.btn}
+            iconLeft={<MdArrowBackIosNew />}
+            onClick={backForward}
+          >
+            Back section
+          </Button>
+          <Button
+            className={classes.btn}
+            iconRight={<MdArrowForwardIos />}
+            onClick={moveForward}
+          >
+            Next section
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 @import '../../../variables.scss';
 .homeContainer{
-  margin-top: 70px;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -58,6 +57,14 @@
     }
   }
 
+}
+
+.fixed{
+  border: none !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto!important;
+  position: fixed !important;
 }
 
 

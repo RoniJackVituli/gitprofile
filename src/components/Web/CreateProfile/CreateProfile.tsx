@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import Navbar from "../../UI/Navbar/Navbar";
 import Intro from "../Introduction/Intro";
 import ReadMe from "../ReadMe/ReadMe";
 import Skills from "../Skills/Skills";
@@ -21,6 +22,8 @@ const CreateProfile = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className={classes.createContainer}>
       <div className={classes.fields}>
         {SECTIONS.map((Section, i) => {
@@ -39,6 +42,7 @@ const CreateProfile = () => {
         <ReadMe/>
       </div>
     </div>
+        </>
   );
 };
 

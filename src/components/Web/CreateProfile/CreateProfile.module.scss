@@ -7,7 +7,6 @@
   }
   .fields{
     height: 100%;
-    margin-top: 70px;
     width: 50%;
     @media (max-width: 770px) {
       width: 100%;
@@ -15,7 +14,6 @@
   }
   
   .readme{
-    margin-top: 70px;
     width: 50%;
     border-left: 1px solid $line-color;
     @media (max-width: 770px) {

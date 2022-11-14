@@ -3,9 +3,14 @@ import classes from "./Navbar.module.scss";
 import { AiFillGithub } from "react-icons/ai";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
-const Navbar = () => {
+
+type Props = {
+  className?: string;
+}
+
+const Navbar:React.FC<Props> = ({className}) => {
   return (
-    <header className={classes.headerContainer}>
+    <header className={classes.headerContainer + ` ${className}`}>
       <div className={classes.leftHeader}>
         <h2>
           <Link to={"/"}>

@@ -23,6 +23,7 @@ const BoxIcon: React.FC<Props> = ({ title, iconTitle, list }) => {
   return (
     <div className={classes.boxiconContainer}>
       <div className={classes.titlebox}>
+        <span>{iconTitle}</span>
         <h1>{title}</h1>
       </div>
       <div className={classes.list}>
