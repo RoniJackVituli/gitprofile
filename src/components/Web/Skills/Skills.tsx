@@ -13,6 +13,8 @@ type Props = {
 
 const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
   const core = useSelector((state: RootState) => state.skills.core);
+  const frontend = useSelector((state: RootState) => state.skills.frontend);
+  const software = useSelector((state: RootState) => state.skills.software);
 
   return (
     <div className={classes.skillContainer}>
@@ -42,9 +44,9 @@ const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
       </div>
       <div className={classes.fillFields}>
         <BoxIcon title="core" iconTitle={<MdComputer />} list={core} />
-        <BoxIcon title="frontend" iconTitle={<MdComputer />} list={core} />
+        <BoxIcon title="frontend" iconTitle={<MdComputer />} list={frontend} />
         <BoxIcon title="backend" iconTitle={<MdComputer />} list={core} />
-        <BoxIcon title="software" iconTitle={<MdComputer />} list={core} />
+        <BoxIcon title="software" iconTitle={<MdComputer />} list={software} />
         <BoxIcon title="other" iconTitle={<MdComputer />} list={core} />
         <div className={classes.divBtn}>
           <Button

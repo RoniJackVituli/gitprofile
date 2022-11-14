@@ -28,6 +28,6 @@ export interface IconData {
   frontend: IconDataField[],
   backend: IconDataField[],
   other:IconDataField[],
-  web3: IconDataField[],
+  software: IconDataField[],
   skills: any[],
 }
