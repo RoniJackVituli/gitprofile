@@ -1,0 +1,18 @@
+@import "../../../variables.scss";
+
+.markdownContainer{
+  height: 87vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.markdownContainer::-webkit-scrollbar{
+  background-color: $color-web-one;
+  border-radius: 10px;
+}
+
+.markdownContainer::-webkit-scrollbar-thumb {
+  background-color: $line-color;
+  border-radius: 20px;
+}

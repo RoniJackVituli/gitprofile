@@ -4,11 +4,27 @@
   padding: 20px;
   .chooseOptions{
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    .optionOne{
+      display: flex;
+      gap: 20px;
+    }
+    .optionTwo{
+    }
     .grey{
       width: 150px;
       padding: 8px;
       background-color: grey;
+    }
+
+    .copy{
+      width: 150px;
+      padding: 8px;
+      background-color: rgb(64, 150, 62);
+    }
+    .grey:hover{
+      background-color: rgb(113, 113, 113);
+
     }
     .original{
       padding: 8px;

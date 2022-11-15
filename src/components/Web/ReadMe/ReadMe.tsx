@@ -1,43 +1,66 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../../UI/Button/Button";
-import Markdown from "./Markdown";
-import Preview from "./Preview";
+import { AiOutlineArrowDown, AiOutlineEye } from "react-icons/ai";
+import { FiCopy } from "react-icons/fi";
 import classes from "./ReadMe.module.scss";
-import {AiOutlineArrowDown ,AiOutlineEye} from 'react-icons/ai';
+import { StateActions } from "../../../slices/State-slice";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
+import Preview from "./Preview";
+import Markdown from "./Markdown";
 
 const ReadMe = () => {
-  const [choice, setChoice] = useState({ name: "preview", choice: true });
+  const dispatch = useDispatch();
+  const state = useSelector((state: RootState) => state.state);
   const chooseOptionHandler = (name: string) => {
-    setChoice((prev)=>{
-      return prev.name === name ? prev : {name, choice: !prev.choice};
-    })
+    dispatch(StateActions.changeState({ name }));
+    dispatch(StateActions.triggerCpy({ copy: "" }));
   };
-
+  const copyHandler = () => {
+    dispatch(StateActions.changeState({ name: "markdown" }));
+    dispatch(StateActions.triggerCpy({ copy: "copy", num: "d" }));
+  };
   return (
     <div className={classes.readme}>
       <div className={classes.chooseOptions}>
-        <Button
-          className={`${choice.choice ? classes.original : classes.grey}`}
-          onClick={() => {
-            chooseOptionHandler("preview");
-          }}
-          iconLeft={<AiOutlineEye/>}
-        >
-          <span>Preview</span>
-        </Button>
-        <Button
-          className={`${choice.choice ? classes.grey : classes.original}`}
-          onClick={() => {
-            chooseOptionHandler("markdown");
-          }}
-          iconLeft={<AiOutlineArrowDown/>}
-        >
-          Markdown
-        </Button>
+        <div className={classes.optionOne}>
+          <Button
+            className={`${
+              state.name === "preview" ? classes.original : classes.grey
+            }`}
+            onClick={() => {
+              chooseOptionHandler("preview");
+            }}
+            iconLeft={<AiOutlineEye />}
+          >
+            <span>Preview</span>
+          </Button>
+          <Button
+            className={`${
+              state.name === "markdown" ? classes.original : classes.grey
+            }`}
+            onClick={() => {
+              chooseOptionHandler("markdown");
+            }}
+            iconLeft={<AiOutlineArrowDown />}
+          >
+            Markdown
+          </Button>
+        </div>
+        <div className={classes.optionTwo}>
+          <Button
+            className={`${state.copy === "copy" ? classes.copy : classes.grey}`}
+            iconRight={<FiCopy />}
+            style={{ width: `${state.copy === "copy" ? '100px' : '80px'}` }}
+            onClick={copyHandler}
+          >
+            {state.copy === "copy" ? 'Copied' : 'Copy'}
+          </Button>
+        </div>
       </div>
       <div>
-        {choice.choice && <Preview/>}
-        {!choice.choice && <Markdown/>}
+        {state.name === "preview" && <Preview />}
+        {state.name === "markdown" && <Markdown />}
       </div>
     </div>
   );

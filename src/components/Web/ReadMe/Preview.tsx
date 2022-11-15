@@ -2,10 +2,15 @@ import React from "react";
 import classes from "./Preview.module.scss";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
+
 const Preview = () => {
   const introduction = useSelector((state: RootState) => state.intro);
   const skills = useSelector((state: RootState) => state.skills.skills);
   const socials = useSelector((state: RootState) => state.social);
+
+
+  
+
   return (
     <div className={classes.previewContainer}>
       {introduction.fullName && (
@@ -76,7 +81,6 @@ const Preview = () => {
             );
           })}
       </div>
-
       <div className={classes.social}>
         {Object.keys(socials).map((s) => {
           const social = (socials as any)[s];
