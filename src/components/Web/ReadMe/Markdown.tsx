@@ -23,7 +23,7 @@ const Markdown = () => {
           console.log("error!");
         });
     }
-  }, [copy_v]);
+  }, [copy_v, copy]);
 
   return (
     <div className={classes.markdownContainer}>
