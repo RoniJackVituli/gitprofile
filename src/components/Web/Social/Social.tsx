@@ -17,10 +17,10 @@ const Social: React.FC<Props> = ({ moveForward, backForward }) => {
     event: React.ChangeEvent<HTMLInputElement>,
     index: number
   ) => {
-    const value = event.target.value;
-    dispatch(SocialActions.update({ index, value }));
+    const {name, value} = event.target;
+    dispatch(SocialActions.update({ index, value, name }));
   };
-  const socials = useSelector((state: RootState) => state.social.socials);
+  const socials = useSelector((state: RootState) => state.social);
   return (
     <div className={classes.socialContainer}>
       <div className={classes.titleSection}>
@@ -48,7 +48,8 @@ const Social: React.FC<Props> = ({ moveForward, backForward }) => {
         </div>
       </div>
       <div className={classes.fillFields}>
-        {socials.map((social, i) => {
+        {Object.keys(socials).map((s, i) => {
+          const social = (socials as any)[s];
           return (
             <div className={classes.field} key={i}>
               <div className={classes.label}>

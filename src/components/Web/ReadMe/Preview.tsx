@@ -5,7 +5,7 @@ import { RootState } from "../../../store/store";
 const Preview = () => {
   const introduction = useSelector((state: RootState) => state.intro);
   const skills = useSelector((state: RootState) => state.skills.skills);
-
+  const socials = useSelector((state: RootState) => state.social);
   return (
     <div className={classes.previewContainer}>
       {introduction.fullName && (
@@ -65,14 +65,30 @@ const Preview = () => {
         {skills.length > 0 &&
           skills.map((skill, i) => {
             return (
-              <a href={skill.link} target="_blank" rel="noreferrer noopener" key={i}>
-                <img
-                  src={skill.path + skill.name + "-color.svg"}
-                  alt=""
-                />
+              <a
+                href={skill.link}
+                target="_blank"
+                rel="noreferrer noopener"
+                key={i}
+              >
+                <img src={skill.path + skill.name + "-color.svg"} alt="" />
               </a>
             );
           })}
+      </div>
+
+      <div className={classes.social}>
+        {Object.keys(socials).map((s) => {
+          const social = (socials as any)[s];
+          if (social.userName) {
+            return (
+              <a href={social.link + social.userName}>
+                <img src={social.path + social.name + ".svg"} alt="" />
+              </a>
+            );
+          }
+          return <></>;
+        })}
       </div>
     </div>
   );

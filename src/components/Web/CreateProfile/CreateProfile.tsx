@@ -1,14 +1,15 @@
 import React, { Fragment, useState } from "react";
+import ComingSoon from "../../UI/ComingSoon/ComingSoon";
 import Navbar from "../../UI/Navbar/Navbar";
 import Intro from "../Introduction/Intro";
 import ReadMe from "../ReadMe/ReadMe";
 import Skills from "../Skills/Skills";
 import Social from "../Social/Social";
 import classes from "./CreateProfile.module.scss";
-export const SECTIONS = [Intro, Skills, Social];
+export const SECTIONS = [Intro, Skills, Social, ComingSoon];
 
 const CreateProfile = () => {
-  
+
   const [currect, setCurrect] = useState(0);
   const moveForward = () => {
     setCurrect((prev)=>{

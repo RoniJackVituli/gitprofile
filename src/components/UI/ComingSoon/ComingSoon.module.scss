@@ -1,0 +1,62 @@
+@import '../../../variables.scss';
+
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+  .titleSection {
+    overflow: hidden;
+    padding: 20px;
+    border-bottom: 1px solid $line-color;
+    h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      margin: 0;
+    }
+    .divBtn{
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .btn{
+        text-align: center;
+      
+        padding: 5px;
+      }
+    }
+  }
+  .fillFields {
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px 20px;
+    padding-top: 50px;
+    .comingsoonImg{
+      display: flex;
+      justify-content: center;
+    }
+    .field{
+      .label{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img{
+          width: 20px;
+        }
+      }
+    }
+    .divBtn{
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .btn{
+        text-align: center;
+        padding: 5px;
+      }
+    }
+  }
+}
