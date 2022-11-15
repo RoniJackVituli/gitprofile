@@ -37,6 +37,11 @@
     .comingsoonImg{
       display: flex;
       justify-content: center;
+      @media (max-width: 770px) {
+        img{
+          width: 350px;
+        }
+      }
     }
     .field{
       .label{
