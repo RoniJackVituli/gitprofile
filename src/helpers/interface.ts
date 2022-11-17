@@ -29,6 +29,7 @@ export interface IconData {
   backend: IconDataField[],
   other:IconDataField[],
   software: IconDataField[],
+  ide_software: IconDataField[],
   skills: any[],
 }
 

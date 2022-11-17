@@ -16,7 +16,7 @@ const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
   const frontend = useSelector((state: RootState) => state.skills.frontend);
   const backend = useSelector((state: RootState) => state.skills.backend);
   const software = useSelector((state: RootState) => state.skills.software);
-
+  const ide_software = useSelector((state:RootState) => state.skills.ide_software);
   return (
     <div className={classes.skillContainer}>
       <div className={classes.titleSection}>
@@ -48,6 +48,7 @@ const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
         <BoxIcon title="frontend" iconTitle={<MdComputer />} list={frontend} />
         <BoxIcon title="backend" iconTitle={<MdComputer />} list={backend} />
         <BoxIcon title="software" iconTitle={<MdComputer />} list={software} />
+        <BoxIcon title="IDE" iconTitle={<MdComputer />} list={ide_software} />
         {/* <BoxIcon title="other" iconTitle={<MdComputer />} list={core} /> */}
         <div className={classes.divBtn}>
           <Button
