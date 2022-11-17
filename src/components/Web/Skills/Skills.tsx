@@ -17,6 +17,7 @@ const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
   const backend = useSelector((state: RootState) => state.skills.backend);
   const software = useSelector((state: RootState) => state.skills.software);
   const ide_software = useSelector((state:RootState) => state.skills.ide_software);
+  
   return (
     <div className={classes.skillContainer}>
       <div className={classes.titleSection}>
@@ -44,12 +45,12 @@ const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
         </div>
       </div>
       <div className={classes.fillFields}>
-        <BoxIcon title="core" iconTitle={<MdComputer />} list={core} />
-        <BoxIcon title="frontend" iconTitle={<MdComputer />} list={frontend} />
-        <BoxIcon title="backend" iconTitle={<MdComputer />} list={backend} />
-        <BoxIcon title="software" iconTitle={<MdComputer />} list={software} />
-        <BoxIcon title="IDE" iconTitle={<MdComputer />} list={ide_software} />
-        {/* <BoxIcon title="other" iconTitle={<MdComputer />} list={core} /> */}
+        <BoxIcon title="core"  key_title="core" iconTitle={<MdComputer />} list={core} />
+        <BoxIcon title="frontend" key_title="frontend" iconTitle={<MdComputer />} list={frontend} />
+        <BoxIcon title="backend" key_title="backend" iconTitle={<MdComputer />} list={backend} />
+        <BoxIcon title="software" key_title="software" iconTitle={<MdComputer />} list={software} />
+        <BoxIcon title="IDE" key_title="ide_software" iconTitle={<MdComputer />} list={ide_software} />
+        {/* <BoxIcon title="other" key="" iconTitle={<MdComputer />} list={core} /> */}
         <div className={classes.divBtn}>
           <Button
             className={classes.btn}

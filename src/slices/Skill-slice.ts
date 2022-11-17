@@ -259,7 +259,9 @@ const Skill = createSlice({
   initialState,
   reducers: {
     addSkill(state, actions) {
-      const key = actions.payload.key;
+      const key = actions.payload.key_title;
+      console.log(key);
+      
       const index = actions.payload.index;
       const skill = (state as any)[key][index];
       skill.clicked = true;
@@ -267,7 +269,7 @@ const Skill = createSlice({
     },
 
     removeSkill(state, actions) {
-      const key = actions.payload.key;
+      const key = actions.payload.key_title;
       const index = actions.payload.index;
       const skill = (state as any)[key][index];
       skill.clicked = false;

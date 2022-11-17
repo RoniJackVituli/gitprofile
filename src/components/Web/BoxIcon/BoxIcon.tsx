@@ -6,18 +6,19 @@ import { Tooltip } from "@mui/material";
 
 type Props = {
   title: string;
+  key_title: string;
   list: any;
   iconTitle: any;
 };
 
-const BoxIcon: React.FC<Props> = ({ title, iconTitle, list }) => {
+const BoxIcon: React.FC<Props> = ({ title, iconTitle, list, key_title }) => {
   const dispatch = useDispatch();
 
   const AddToSkill = (index: number) => {
-    dispatch(SkillActions.addSkill({ key: title, index }));
+    dispatch(SkillActions.addSkill({ key_title, index }));
   };
   const removeFromSkill = (index: number) => {
-    dispatch(SkillActions.removeSkill({ key: title, index }));
+    dispatch(SkillActions.removeSkill({ key_title, index }));
   };
 
   return (
