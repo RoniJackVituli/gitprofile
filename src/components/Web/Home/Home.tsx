@@ -3,6 +3,8 @@ import classes from "./Home.module.scss";
 import { Animated } from "react-animated-css";
 import Button from "../../UI/Button/Button";
 import Navbar from "../../UI/Navbar/Navbar";
+import gitprofile from "../../../helpers/GitProfile.png";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Home = () => {
   return (
@@ -55,6 +57,22 @@ const Home = () => {
           </Animated>
         </div>
       </div>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+        <div className={classes.gitprofile + " "}>
+          <img src={gitprofile} alt="" />
+        </div>
+      </AnimationOnScroll>
+      <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+        <div className={classes.what_we_do}>
+          <h1>
+            What <span>We</span> Do?
+          </h1>
+          <h3>
+            we make your git profile look amazing
+            <br /> and more professional
+          </h3>
+        </div>
+      </AnimationOnScroll>
     </>
   );
 };

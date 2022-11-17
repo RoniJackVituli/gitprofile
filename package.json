@@ -16,6 +16,7 @@
     "@types/react-dom": "^18.0.8",
     "react": "^18.2.0",
     "react-animated-css": "^1.2.1",
+    "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-redux": "^8.0.5",
