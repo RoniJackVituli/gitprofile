@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import ComingSoon from "../../UI/ComingSoon/ComingSoon";
 import Navbar from "../../UI/Navbar/Navbar";
 import Intro from "../Introduction/Intro";

@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../../UI/Button/Button";
 import classes from "./Skills.module.scss";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
@@ -18,6 +17,7 @@ const Skills: React.FC<Props> = ({ moveForward, backForward }) => {
   const software = useSelector((state: RootState) => state.skills.software);
   const ide_software = useSelector((state:RootState) => state.skills.ide_software);
   
+
   return (
     <div className={classes.skillContainer}>
       <div className={classes.titleSection}>

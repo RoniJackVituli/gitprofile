@@ -334,6 +334,7 @@ const Skill = createSlice({
       const skill = (state as any)[key][index];
       skill.clicked = true;
       state.skills = [...state.skills, skill];
+      localStorage.setItem('skill', JSON.stringify(state))
     },
 
     removeSkill(state, actions) {
@@ -343,6 +344,8 @@ const Skill = createSlice({
       skill.clicked = false;
       state.skills = state.skills.filter((s) => s.name !== skill.name);
     },
+
+    
   },
 });
 

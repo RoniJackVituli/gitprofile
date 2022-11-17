@@ -31,7 +31,7 @@ const BoxIcon: React.FC<Props> = ({ title, iconTitle, list, key_title }) => {
         {list.map((icon: any, i: number) => {
           if (!icon.clicked) {
             return (
-              <Tooltip title={icon.toolTip}>
+              <Tooltip title={icon.toolTip} disableFocusListener={true} disableTouchListener={true}>
                 <img
                   src={icon.path + icon.name + ".svg"}
                   alt=""
@@ -44,7 +44,7 @@ const BoxIcon: React.FC<Props> = ({ title, iconTitle, list, key_title }) => {
             );
           }
           return (
-            <Tooltip title={icon.toolTip} >
+            <Tooltip title={icon.toolTip} disableFocusListener={true} disableTouchListener={true}>
               <img
                 src={icon.path + icon.name + "-color.svg"}
                 key={i}

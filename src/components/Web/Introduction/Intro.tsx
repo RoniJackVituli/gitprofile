@@ -16,11 +16,12 @@ type Props = {
 const Intro: React.FC<Props> = ({ moveForward }) => {
   const dispatch = useDispatch();
   const introduction = useSelector((state: RootState) => state.intro);
+  
+  
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const {name , value} = event.target;
     dispatch(IntroductionActions.update({name, value}))
   }
-
 
   return (
     <div className={classes.introContainer}>
