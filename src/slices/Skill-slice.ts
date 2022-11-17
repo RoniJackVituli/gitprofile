@@ -118,10 +118,45 @@ const initialState: IconData = {
       clicked: false,
     },
     {
+      name: "nuxtjs",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "nuxtjs",
+      link: "https://nuxtjs.org/",
+      clicked: false,
+    },
+    {
+      name: "redux",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "Redux",
+      link: "https://redux.js.org/",
+      clicked: false,
+    },
+    {
       name: "angularjs",
       path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
       toolTip: "Angular",
       link: "https://angular.io/docs",
+      clicked: false,
+    },
+    {
+      name: "materialui",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "Material UI",
+      link: "https://angular.io/docs",
+      clicked: false,
+    },
+    {
+      name: "jquery",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "jquery",
+      link: "https://jquery.com/",
+      clicked: false,
+    },
+    {
+      name: "tailwindcss",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "Tailwind CSS",
+      link: "https://tailwindcss.com/",
       clicked: false,
     },
   ],
@@ -131,6 +166,34 @@ const initialState: IconData = {
       path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
       toolTip: "Nodejs",
       link: "https://nodejs.org/en/docs/",
+      clicked: false,
+    },
+    {
+      name: "mysql",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "MySql",
+      link: "https://www.mysql.com/",
+      clicked: false,
+    },
+    {
+      name: "firebase",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "Firebase",
+      link: "https://www.mysql.com/",
+      clicked: false,
+    },
+    {
+      name: "sqlite",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "SQLite",
+      link: "https://firebase.google.com/?gclid=Cj0KCQiA1NebBhDDARIsAANiDD0WAk2cXLSF1OL1qTEnmokX4CjpWAl_UiJElEZW4hlMvl16h4AWltEaApgxEALw_wcB&gclsrc=aw.ds",
+      clicked: false,
+    },
+    {
+      name: "postgresql",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "PostgreSQL",
+      link: "https://www.postgresql.org/",
       clicked: false,
     },
     {
@@ -145,6 +208,13 @@ const initialState: IconData = {
       path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
       toolTip: "MongoDB",
       link: "https://mongodb.com/",
+      clicked: false,
+    },
+    {
+      name: "graphql",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "Graphql",
+      link: "https://graphql.org/",
       clicked: false,
     },
   ],
@@ -260,8 +330,6 @@ const Skill = createSlice({
   reducers: {
     addSkill(state, actions) {
       const key = actions.payload.key_title;
-      console.log(key);
-      
       const index = actions.payload.index;
       const skill = (state as any)[key][index];
       skill.clicked = true;
