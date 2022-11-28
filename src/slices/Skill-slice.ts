@@ -268,6 +268,13 @@ const initialState: IconData = {
       link: "https://www.sketch.com",
       clicked: false,
     },
+    {
+      name: "finalcutpro",
+      path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
+      toolTip: "Final Cut Pro X",
+      link: "https://www.apple.com/final-cut-pro/",
+      clicked: false,
+    },
   ],
   ide_software: [
     {
