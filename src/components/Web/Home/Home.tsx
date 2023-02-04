@@ -57,11 +57,9 @@ const Home = () => {
           </Animated>
         </div>
       </div>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
         <div className={classes.gitprofile + " "}>
           <img src={gitprofile} alt="" />
         </div>
-      </AnimationOnScroll>
       <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
         <div className={classes.what_we_do}>
           <h1>

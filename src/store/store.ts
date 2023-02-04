@@ -3,6 +3,7 @@ import Introduction from "../slices/introduction-slice";
 import Skill from "../slices/Skill-slice";
 import Social from "../slices/Social-slice";
 import Badges from "../slices/Badges-slice";
+import BadgesStatsSlice from "../slices/BadgesStats-slice";
 import STATE from "../slices/State-slice";
 
 // convert object to string and store in localStorage
@@ -33,7 +34,7 @@ const store = configureStore({
     intro: Introduction.reducer,
     skills: Skill.reducer,
     social: Social.reducer,
-    badges: Badges.reducer,
+    badgesStats: BadgesStatsSlice.reducer,
     state: STATE.reducer,
   },
   preloadedState: loadFromLocalStorage(),

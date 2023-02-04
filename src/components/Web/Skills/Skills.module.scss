@@ -47,3 +47,12 @@
     }
   }
 }
+
+.fillFields::-webkit-scrollbar {
+  background-color: $color-web-one;
+  border-radius: 10px;
+}
+.fillFields::-webkit-scrollbar-thumb {
+  background-color: $line-color;
+  border-radius: 20px;
+}

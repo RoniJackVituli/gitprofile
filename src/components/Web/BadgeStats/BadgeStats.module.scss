@@ -1,0 +1,205 @@
+@import '../../../variables.scss';
+
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+  .titleSection {
+    overflow: hidden;
+    padding: 20px;
+    border-bottom: 1px solid $line-color;
+    h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      margin: 0;
+    }
+    .divBtn{
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .btn{
+        text-align: center;
+      
+        padding: 5px;
+      }
+    }
+  }
+  .fillFields {
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px 20px;
+    .clear{
+      width: max-content;
+      padding: 5px;
+      border-radius: 5px;
+      text-transform: uppercase;
+    }
+    .disabled{
+      opacity: 0.5;
+      pointer-events: none;
+      
+    }
+    .messageError{
+      h3{
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      .openGitHubSocial{
+        margin: 0;
+        cursor: pointer;
+        color: $color-web-one;
+        border-bottom: 1px solid $color-hover;
+        transition: 0.2s;
+      }
+      .openGitHubSocial:hover{
+        color: $color-hover
+      }
+    }
+    .choiceGitHubStats{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px ;
+      justify-content: space-evenly;
+      align-items: center;
+      cursor: pointer;
+      .imgdiv{
+        position: relative;
+        margin-bottom: 2px;
+        .svgOk{
+          right: 0;
+          position: absolute;
+          z-index: 3;
+          width: 30px;
+        }
+        img{
+          margin: 5px;
+          width: 350px;
+        }
+        img:hover{
+          border: 1px solid;
+          border-radius: 5px;
+          transform: scale(1.05);
+        }
+      }
+      border-bottom: 1px solid $line-color;
+    }
+    .choiceGraph{
+      display: flex;
+      flex-direction: column;
+      padding: 20px ;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .imgdiv{
+        margin-bottom: 2px;
+        position: relative;
+        .svgOk{
+          right: 0;
+          position: absolute;
+          z-index: 3;
+          width: 30px;
+        }
+        img{
+          margin: 5px;
+          width: 700px;
+        }
+        img:hover{
+          border: 1px solid;
+          border-radius: 5px;
+          transform: scale(1.05);
+        }
+        @media (max-width: 640px) {
+          img{
+            width: 400px;
+          }
+        }
+      }
+      border-bottom: 1px solid $line-color;
+    }
+    .choiceBadge{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px ;
+      justify-content: space-evenly;
+      align-items: center;
+      cursor: pointer;
+      .imgdiv{
+        margin-bottom: 2px;
+        position: relative;
+        .svgOk{
+          right: 0;
+          position: absolute;
+          z-index: 3;
+          width: 15px;
+        }
+        img{
+          margin: 6px;
+        }
+        img:hover{
+          border: 1px solid;
+          border-radius: 2px;
+          transform: scale(1.05);
+        }
+      }
+      border-bottom: 1px solid $line-color;
+    }
+    .choice{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px ;
+      align-items: center;
+      cursor: pointer;
+      justify-content: space-evenly;
+
+      .imgdiv{
+        margin-bottom: 2px;
+        position: relative;
+        .svgOk{
+          right: 0;
+          position: absolute;
+          z-index: 3;
+          width: 30px;
+        }
+        img{
+          margin: 5px;
+          width: 350px;
+        }
+        img:hover{
+          border: 1px solid;
+          border-radius: 5px;
+          transform: scale(1.05);
+        } 
+        @media (max-width: 640px){
+          img{
+            width: 300px;
+          }
+        }
+        
+      }
+      border-bottom: 1px solid $line-color;
+    }
+    .divBtn{
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .btn{
+        text-align: center;
+        padding: 5px;
+      }
+    }
+  }
+}
+.fillFields::-webkit-scrollbar {
+  background-color: $color-web-one;
+  border-radius: 10px;
+}
+.fillFields::-webkit-scrollbar-thumb {
+  background-color: $line-color;
+  border-radius: 20px;
+}

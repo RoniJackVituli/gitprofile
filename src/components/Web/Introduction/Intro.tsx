@@ -28,8 +28,7 @@ const Intro: React.FC<Props> = ({ moveForward }) => {
       <div className={classes.titleSection}>
         <h1>Introduction</h1>
         <p>
-          This is the stage to introduce yourself, tell them who you are and
-          what you like to do &#129299;
+        Take the opportunity to make a great first impression! This is where you can showcase your unique personality, share your passions, and let others get to know you. So don't be shy, let your voice be heard and tell the world who you are and what you're all about 💻🚀
         </p>
         <div className={classes.divBtn}>
           <Button className={classes.btn} iconRight={<MdArrowForwardIos/>} onClick={moveForward}>
