@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import Introduction from "../slices/introduction-slice";
 import Skill from "../slices/Skill-slice";
 import Social from "../slices/Social-slice";
-import Badges from "../slices/Badges-slice";
+// import Badges from "../slices/Badges-slice";
 import BadgesStatsSlice from "../slices/BadgesStats-slice";
 import STATE from "../slices/State-slice";
 
