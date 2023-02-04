@@ -1,12 +1,12 @@
 import React, { Fragment, useState } from "react";
-import ComingSoon from "../../UI/ComingSoon/ComingSoon";
+import BadgeStats from "../../Web/BadgeStats/BadgeStats";
 import Navbar from "../../UI/Navbar/Navbar";
 import Intro from "../../Web/Introduction/Intro";
 import ReadMe from "../../Web/ReadMe/ReadMe";
 import Skills from "../../Web/Skills/Skills";
 import Social from "../../Web/Social/Social";
 import classes from "./CreateProfile.scss";
-export const SECTIONS = [Intro, Skills, Social, ComingSoon];
+export const SECTIONS = [Intro, Skills, Social, BadgeStats];
 
 const CreateProfile = () => {
 

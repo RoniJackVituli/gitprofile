@@ -1,9 +1,12 @@
+@import '../../../variables.scss';
+
 .previewContainer{
   margin: 5px;
   height: 87vh;
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
   padding: 20px;
+  word-wrap: break-word;
   h1{
     margin: 0;
     margin-bottom: 10px;
@@ -14,6 +17,7 @@
     font-size: 25px;
   }
   p{
+    word-wrap: break-word;
     color: rgba(255, 255, 255, 0.712);
   }
   ul{
@@ -39,4 +43,13 @@
       width: 45px;
     }
   }
+}
+
+.previewContainer::-webkit-scrollbar {
+  background-color: $color-web-one;
+  border-radius: 5px;
+}
+.previewContainer::-webkit-scrollbar-thumb {
+  background-color: $line-color;
+  border-radius: 10px;
 }

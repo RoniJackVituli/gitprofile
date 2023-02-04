@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import ComingSoon from "../../UI/ComingSoon/ComingSoon";
+import ComingSoon from "../BadgeStats/BadgeStats";
 import Navbar from "../../UI/Navbar/Navbar";
 import Intro from "../Introduction/Intro";
 import ReadMe from "../ReadMe/ReadMe";

@@ -21,14 +21,15 @@ const Social: React.FC<Props> = ({ moveForward, backForward }) => {
     dispatch(SocialActions.update({ index, value, name }));
   };
   const socials = useSelector((state: RootState) => state.social);
+  
+  
+  
   return (
     <div className={classes.socialContainer}>
       <div className={classes.titleSection}>
         <h1>Social</h1>
         <p>
-          It's time to show off, you can choose all the languages, frameworks,
-          software you specialize in, and you can also add the social networks
-          you're active.
+        Unleash your full potential and showcase your online presence by connecting your social media profiles. It's the perfect way to network, collaborate, and stand out from the crowd. So, don't wait any longer, add your social media now and let the world know what you've got!
         </p>
         <div className={classes.divBtn}>
           <Button
