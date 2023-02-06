@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./Navbar.module.scss";
 import { AiFillGithub } from "react-icons/ai";
 import Button from "../Button/Button";
-import { Link } from "react-router-dom";
 import Container from "../Container/Container";
 import LogoWeb from "../LogoWeb/LogoWeb";
 type Props = {
