@@ -7,7 +7,6 @@
   z-index: 5;
   right: 0;
   border-bottom: 1px solid $line-color;
-  max-width: 100%;
   display: flex;
   width: 100%;
   margin-left: auto;
@@ -17,19 +16,8 @@
   background-color: $backgroundSite;
   padding: 0 20px;
   justify-content: space-between;
-  .leftHeader {
-    h2 {
-      margin: 0;
-      font-size: 30px;
-      a {
-        text-decoration: none;
-      }
-      span {
-        color: $color-web-one;
-      }
-    }
-  }
 
+  
   .rightHeader {
     ul {
       list-style: none;

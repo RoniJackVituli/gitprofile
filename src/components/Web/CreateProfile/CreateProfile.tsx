@@ -25,7 +25,7 @@ const CreateProfile = () => {
 
   return (
     <>
-    <Navbar/>
+    <Navbar className={classes.maxWidth}/>
     <div className={classes.createContainer}>
       <div className={classes.fields}>
         {SECTIONS.map((Section, i) => {

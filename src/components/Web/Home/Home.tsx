@@ -5,6 +5,9 @@ import Button from "../../UI/Button/Button";
 import Navbar from "../../UI/Navbar/Navbar";
 import gitprofile from "../../../helpers/GitProfile.png";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import Footer from "../../UI/Footer/Footer";
+import Container from "../../UI/Container/Container";
+import { icons } from "../../../helpers/icons";
 
 const Home = () => {
   return (
@@ -57,9 +60,9 @@ const Home = () => {
           </Animated>
         </div>
       </div>
-        <div className={classes.gitprofile + " "}>
-          <img src={gitprofile} alt="" />
-        </div>
+      <div className={classes.gitprofile + " "}>
+        <img src={gitprofile} alt="" />
+      </div>
       <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
         <div className={classes.what_we_do}>
           <h1>
@@ -71,6 +74,42 @@ const Home = () => {
           </h3>
         </div>
       </AnimationOnScroll>
+      <Container>
+        <section className={classes.sectionOne}>
+          <AnimationOnScroll
+            animateIn="animate__fadeInLeft"
+            animateOnce={true}
+            className={classes.titleOne}
+          >
+            <h1>
+              Show off your <span>knowledge</span>
+            </h1>
+            <span id={classes.subtitle}>Highlight your skillset and let your knowledge shine with our customizable design options.</span>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}>
+            <div className={classes.boxIcons}>
+              {icons.map((line) => {
+                return (
+                  <div className={classes.line}>
+                    {line.map((icon) => {
+                      return (
+                        <img
+                          src={`https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/${icon}-color.svg`}
+                          alt=""
+                        />
+                      );
+                    })}
+                  </div>
+                );
+              })}
+            </div>
+          </AnimationOnScroll>
+        </section>
+        <section  className={classes.sectionTwo}>
+
+        </section>
+      </Container>
+      <Footer className={classes.fixed} />
     </>
   );
 };
