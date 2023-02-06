@@ -7,7 +7,7 @@ import gitprofile from "../../../helpers/GitProfile.png";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Footer from "../../UI/Footer/Footer";
 import Container from "../../UI/Container/Container";
-import { icons } from "../../../helpers/icons";
+import { icons, socialIcons } from "../../../helpers/icons";
 
 const Home = () => {
   return (
@@ -61,7 +61,7 @@ const Home = () => {
         </div>
       </div>
       <div className={classes.gitprofile + " "}>
-        <img src={gitprofile} alt="" />
+        <img src={gitprofile} alt="" loading="lazy" />
       </div>
       <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
         <div className={classes.what_we_do}>
@@ -84,9 +84,15 @@ const Home = () => {
             <h1>
               Show off your <span>knowledge</span>
             </h1>
-            <span id={classes.subtitle}>Highlight your skillset and let your knowledge shine with our customizable design options.</span>
+            <span id={classes.subtitle}>
+              Highlight your skillset and let your knowledge shine with our
+              customizable design options.
+            </span>
           </AnimationOnScroll>
-          <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}>
+          <AnimationOnScroll
+            animateIn="animate__fadeInRight"
+            animateOnce={true}
+          >
             <div className={classes.boxIcons}>
               {icons.map((line) => {
                 return (
@@ -105,8 +111,41 @@ const Home = () => {
             </div>
           </AnimationOnScroll>
         </section>
-        <section  className={classes.sectionTwo}>
+        <section className={classes.sectionTwo}>
+          <AnimationOnScroll
+            animateIn="animate__fadeInLeft"
+            animateOnce={true}
+            className={classes.boxIcons}
+          >
+              {socialIcons.map((line) => {
+                return (
+                  <div className={classes.line}>
+                    {line.map((socialIcon) => {
+                      return (
+                        <img
+                          src={`https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/socials/${socialIcon}.svg`}
+                          alt=""
+                        />
+                      );
+                    })}
+                  </div>
+                );
+              })}
+          </AnimationOnScroll>
 
+          <AnimationOnScroll
+            animateIn="animate__fadeInRight"
+            animateOnce={true}
+            className={classes.titleTwo}
+          >
+            <h1>
+              Add your <span>socials</span>
+            </h1>
+            <span id={classes.subtitle}>
+              Quickly showcase your online presence by linking all of your
+              social profiles{" "}
+            </span>
+          </AnimationOnScroll>
         </section>
       </Container>
       <Footer className={classes.fixed} />
