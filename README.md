@@ -24,3 +24,14 @@ Contributions are always welcome at GitProfile! Whether you're a seasoned develo
 - Test: Try out GitProfile and provide feedback on its functionality and usability.
 
 Thanks for considering contributing to GitProfile! We look forward to collaborating with you!
+
+## Installation
+
+To install the GitProfile project, you will need to follow the following steps:
+
+1. Download the code from the repository.
+2. Open the terminal in the root directory of the project.
+3. Run the following command: yarn install to install all the required dependencies for the project.
+4. After the installation is complete, run the following command: yarn start to start the development server and launch the project in the browser.
+
+With these simple steps, you should be able to get started with GitProfile and start creating amazing GitHub profiles in minutes!
