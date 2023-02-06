@@ -1,0 +1,20 @@
+@import '../../../variables.scss';
+
+
+.LogoFooter {
+  h2 {
+    margin: 0;
+    font-size: 30px;
+    a {
+      text-decoration: none;
+    }
+    span {
+      color: $color-web-one;
+    }
+    @media (max-width:740px) {
+      font-size: 20px;
+    
+     }
+  }
+ 
+}

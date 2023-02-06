@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Container from "./components/UI/Container/Container";
 import Home from "./components/Web/Home/Home";
 import ReactGA from "react-ga";
 import "./App.scss";
@@ -22,12 +21,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Container>
           <Routes>
             <Route path="/createProfile" element={<CreateProfile />} />
             <Route path="/" element={<Home />} />
           </Routes>
-        </Container>
       </div>
     </Router>
   );
