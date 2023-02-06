@@ -166,6 +166,10 @@ const Markdown = () => {
               socials.github.userName
             }&theme=${gitHubGraph[badgesStats.indexGraph]})`}
         </span>
+
+        <br />
+        <br />
+        <span>{`-`} This Profile Created By {`<a href="https://profilegit.netlify.app/">`}GitProfile{`</a>`}</span>
       </div>
     </div>
   );
