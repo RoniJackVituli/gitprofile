@@ -4,3 +4,10 @@ export const icons = [
   ["graphql", "redux", "sass", "figma"],
   ["swift", "php", "python", "typescript"],
 ];
+
+
+export const socialIcons = [
+  ['facebook', 'instagram', 'twitter', 'linkedin'],
+  ['stackoverflow', 'youtube', 'github' ],
+  ['twitch'],
+]
