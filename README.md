@@ -37,4 +37,3 @@ To install the GitProfile project, you will need to follow the following steps:
 With these simple steps, you should be able to get started with GitProfile and start creating amazing GitHub profiles in minutes!
 
 
-- This Profile Created By <a href="https://profilegit.netlify.app/">GitProfile</a>
