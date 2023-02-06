@@ -6,4 +6,4 @@ GitProfile is an innovative platform designed to simplify the process of creatin
 
 ## Demo
 
-You can visit ![HERE](https://profilegit.netlify.app/) and start to design your profile git :) 
+You can visit [HERE](https://profilegit.netlify.app/) and start to design your profile git :) 
